@@ -1,0 +1,88 @@
+.containerFooter{
+    background-color: var(--negro-color);
+    margin-top: 1em;
+        padding: 1em 1em 1em 1em;
+}
+.brandFooter{
+    background-image: url(../c-navbar/logos/LogoSolo.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin: 0.5em 6.5em 1.3em;
+    width: 100%;
+    max-width: 70px;
+  
+}
+.containerLine{
+    border-top: 3px solid var(--cielo-color);
+    height: 2px;
+    max-width: 200px;
+    padding: 0;
+    margin:  0px 2px 14px 0px;
+}
+.containerAddressphone{
+    font-family: 'louis';
+    font-size: 10pt;
+    color: var(--cielo-color) ;
+}
+.containerIcons{
+    display: flex;
+    
+    gap:3em;
+    justify-content: flex-start;
+}
+.footerBigscreen{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:768px){
+    .containerMobileversion{
+        display: none;
+    }
+    .footerBigscreen{
+    display: contents;
+    font-family: 'louis';
+    font-size: 20pt;
+}
+    .containerFooter{
+        padding: 2em 1em 2em 1em;
+        text-align: center;
+    }
+    .brandFooter{
+        margin: 0 auto 0 auto;
+        width: 60px;
+        height: 60px;
+    }
+    .containerLine{
+    border-top: 2px solid var(--azul3-color);
+    height: 1px;
+    max-width: 600px;
+    padding: 0;
+    margin:  0px auto 10px auto;
+}
+.containerComunication{
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+}
+.containerAddressphone{
+    font-family: 'louis';
+    font-size: 16pt;
+    margin: 0 auto 0 auto;
+}
+.containerIcons{
+    display: flex;
+    justify-content: center;
+}
+}

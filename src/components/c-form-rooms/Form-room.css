@@ -1,0 +1,66 @@
+.FormLookupRoom{ 
+    background: linear-gradient(145deg, #dde4e4, var(--cielo-color));
+    border-radius: 20px;
+    box-shadow:  3px 3px 5px #9a9f9f,
+                 -3px -3px 5px var(--cielo-color);
+    margin: 1em 2em;
+    padding: 1em;
+}
+.FormLookupTitle{
+    font-size: 20pt;
+    font-weight: 600;
+    font-family: 'caviar';
+    color: var(--azul2-color);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-bottom: 1em;
+}
+.FormLookupDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;    
+}
+.FormLookupArrival, .FormLookupDeparture, .FormLookupAdults, .FormLookupKids{
+    background-color: #C2D7E9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+}
+.FormLookupButton{
+    display: block;
+    justify-content: center;
+    background-color: var(--azul2-color);
+    margin: 2em 0em 0em ;
+    padding: auto auto;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    color:  var(--cielo-color);
+    font-family: 'louis';
+    font-size: 16pt;
+}
+.FormLookupButton:hover{
+        color: var(--azul2-color);
+        border-color: var(--cielo-color) ;
+    }
+.FormLookupFontName{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16pt;
+    margin: 0.5em 0;
+}
+.FormLookupContainerButton{
+    display: flex;
+    justify-content: center;   
+}
+
+@media screen and (min-width:768px){
+    .FormLookupRoom{ 
+        margin: 1em 8em;
+        padding: 1em;
+        font-size: 20pt;
+    }
+    .FormLookupDisplay{
+        flex-direction: row;   
+    }
+    .FormLookupFontName{
+        margin: 0.3em 0;
+    }
+}

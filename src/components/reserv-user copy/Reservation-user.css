@@ -1,0 +1,253 @@
+.ReservUTitle{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.7em;
+    font-size: 20pt;
+        font-family: 'caviar';
+        font-weight: 800;
+        color: var(--azul2-color);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.ReservUCardTitle{
+    font-size: 18pt;
+        font-family: 'caviar';
+        font-weight: 800;
+        color: var(--azul2-color);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.ReservUButtonNewReserv{
+    background-color: var(--cielo-color);
+    color: var(--azul2-color);
+    border-color: var(--azul2-color) ;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    font-family: 'louis';
+    font-size: 9pt;
+    height: fit-content;
+    width: fit-content;
+}
+.ReservUButtonNewReserv:hover{
+    background-color: var(--cielo-color);
+    color: var(--azul2-color);
+    border-color: var(--azul2-color) ;
+    animation: jello-horizontal 0.9s alternate both;
+}
+.ReservUCardDescriptiveText{
+    font-size: 12pt;
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center;
+}
+.imgRoom1, .imgRoom2{
+    width: 90%;
+    max-height: 160px;
+    margin: 1.5em 1em 1em 1em;
+    border-radius: 8px;
+    justify-content: center;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5) ;
+}
+.ReservUCardFontNigthAdultKid{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 10pt;
+}
+.ReservUCardArrivalDeparture{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    margin-bottom: 1em;
+    justify-content: center;
+}
+.ReservUCardNigthAdultKid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ReservUCardButtonEdit{
+    height: auto;
+    background-color: var(--cielo-color);
+    color: var(--azul2-color);
+    border-color: var(--azul2-color) ;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    font-family: 'louis';
+    font-size: 12pt;
+    margin: 0.4em auto;
+}
+.ReservUCardButtonEdit:hover{
+    background-color: var(--cielo-color);
+    color: var(--azul2-color);
+    border-color: var(--azul2-color) ;
+    animation: jello-horizontal 0.9s alternate both;
+}
+.ReservUCardContainerButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@keyframes jello-horizontal {
+    0% {transform: scale3d(1, 1, 1);}
+    30% {transform: scale3d(1.25, 0.75, 1);}
+    40% {transform: scale3d(0.75, 1.25, 1);}
+    50% {transform: scale3d(1.15, 0.85, 1);}
+    65% {transform: scale3d(0.95, 1.05, 1);}
+    75% {transform: scale3d(1.05, 0.95, 1);}
+    100% {transform: scale3d(1, 1, 1);}
+  }
+.ReservUCardCopPrice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: auto;
+    height: auto;
+    margin: 0em 1em;
+    color:rgba(51,51,51,0.8);
+    font-size: 12pt;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 500;
+    color: rgba(51, 51, 51, 0.8);
+}
+.ReservUCardFontNigthAdultKid{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 10pt;
+}
+.ReservUCardMarginBoxDetails{
+    margin: 10px auto 10px auto;
+    display: grid;
+}
+.ReservUCardBoxDetails{
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin: 0.3em 1em;
+    padding:0;
+}
+.ReservUCardContainer{
+   margin-bottom: 2em;
+}
+.ReservUCardBackground{
+    background-color: var(--grisclaro-color) ;
+    box-shadow: 3px 3px 3px rgba(51, 122, 183, 0.5);
+}
+
+
+@media screen and (min-width:768px){
+    .ReservUCardCopPrice{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: auto;
+        height: auto;
+        margin: 0em 1em;
+        font-size: 16pt;
+        font-family: 'Montserrat', sans-serif; 
+        font-weight: 500;
+    }
+    .ReservUCardNigthAdultKid{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: auto;
+        height: auto;
+        margin: 0em 1em;
+    }
+    .ReservUButtonNewReserv{
+        font-size: 18pt;
+    }
+    .ReservUCardFontNigthAdultKid{
+        font-family: 'Montserrat', sans-serif; 
+        font-size: 9pt;
+    }
+    .ReservUCardArrivalDeparture{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
+.ReservUCardImage{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-top:1px solid rgba(0, 0, 0, 0.4) ;
+}
+.ReservUCardBackground{
+    margin-bottom: 4em;
+    width: 22em;/*-----important--*/
+    height: auto;
+    background-color: var(--grisclaro-color) ;
+    border-radius: 12px;
+    box-shadow: 3px 3px 3px rgba(51, 122, 183, 0.5);
+}
+.titleCardDash{
+    font-size: 24pt;
+    font-family: 'caviar';
+    font-weight: 800;
+    color: var(--azul2-color);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.7em;
+}
+.ReservUCardContainer{
+    width: auto;
+        margin: 10px auto;
+        display: inline-block;
+        flex-direction: row;
+        justify-content:flex-start;
+        gap: 0.8em;
+        margin-bottom: 2em;
+    }
+    .cardDescriptivetext{
+    font-size: 12pt;
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center;
+    margin: 0 0.5em 0.3em 0.5em;
+    }
+    .titleCardDash{
+        font-size: 30pt;
+        font-family: 'caviar';
+        font-weight: 800;
+        color: var(--azul2-color);
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        margin-bottom: 0.7em;
+    }
+    
+    
+    .imgRoom1{
+        margin: 1.5em 1.5em 1em 1.5em;
+    }
+    
+    .copReservation{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: auto;
+        height: auto;
+        margin: 0em 1em;
+        font-size: 16pt;
+        font-family: 'Montserrat', sans-serif; 
+        font-weight: 500;
+    }
+    .nigthAdult{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: auto;
+        height: auto;
+        margin: 0em 1em;
+    }
+    .ReservUTitle{
+        font-size: 30pt;
+        font-family: 'caviar';
+        font-weight: 800;
+    }
+    .fontNigthAdult{
+        font-family: 'Montserrat', sans-serif; 
+        font-size: 9pt;
+    }
+    .ReservUCardButtonEdit{
+        font-size: 18pt;
+        margin: 0.4em auto;
+    }
+    .imgRoom1, .imgRoom2{
+        width: 45%;
+        max-height: 300px;
+    }
+    
+}

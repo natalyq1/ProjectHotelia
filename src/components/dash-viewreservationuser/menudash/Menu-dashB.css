@@ -1,0 +1,64 @@
+.DashMenuUserContainer {
+    background-color: var(--negro-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 1em 1em;
+    margin: 0 auto;
+}
+
+.DashMenuUserContainer img {
+    border-radius: 50%;
+    width: 100px;
+    margin: 0.5em auto;
+    justify-content:left;
+}
+
+.DashMenuUserTextWelcome {
+    color:  var(--cielo-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+}
+
+.DashMenuUserNameUser {
+    color:  var(--cielo-color);
+    font-family: 'louis';
+    font-size: 22px;
+    text-align: center;
+}
+
+
+
+
+@media screen and (min-width:768px) {
+    .DashMenuUserContainer{
+        flex-direction: column;
+        
+    }
+    .DashMenuUserContainer img {
+        width: 300px;
+    }
+    .DashMenuUserTextWelcome {
+        font-size: 40px;
+    }
+    .DashMenuUserNameUser {
+        font-size: 30px;
+    }
+   
+}
+@media screen and (min-width:1024px) {
+    .DashMenuUserContainer {
+        width: 100%;
+    }
+    .DashMenuUserContainer img {
+        width: 250px;
+    }
+    .DashMenuUserTextWelcome {
+        font-size: 30px;
+    }
+    .DashMenuUserNameUser {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,39 @@
+.MainNavbarColor{
+    background-color:  var(--cielo-color);
+}
+.MainNavbarFontSize{
+    font-family: 'louis';
+    font-size: 16pt;
+    text-decoration: none;
+    color: var(--negro-color);
+    padding-right: 0.6em;
+    padding-top: 0.5em;
+}
+
+.MainNavbarBrand{
+    background-image: url(./logos/logo2.png);
+    background-size: cover;
+        background-repeat: no-repeat;
+        width:180px;
+        height:55px;
+        max-width: 100%;
+}
+
+
+@media screen and (min-width:768px){
+     
+.MainNavbarColor{
+    align-items: center;
+    justify-content: center;
+    
+}
+.MainNavbarBrand{
+        height: 80px;
+        width: 270px;
+        max-width: 100%;
+        margin-left: 1em;
+}     
+.MainNavbarAside{
+        margin-left:28em;
+}   
+}

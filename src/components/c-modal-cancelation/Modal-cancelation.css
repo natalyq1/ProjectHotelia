@@ -1,0 +1,98 @@
+.ReservUCardButtonCancel{
+    height: auto;
+    background-color:var(--anaranjado-color) ;
+        color: var(--cielo-color);
+        border-color: var(--azul2-color) ;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;  
+    font-family: 'louis';
+    font-size: 12pt;
+    margin: 0.4em 0;
+}
+.ReservUCardButtonCancel:hover{
+    background-color:var(--anaranjado-color) ;
+        color: var(--cielo-color);
+        border-color: var(--azul2-color) ;
+    animation: jello-horizontal 0.9s alternate both;
+}
+
+.ModalCancelButtonCancel{
+    margin: 0.3em;
+    height: auto;
+    background-color:var(--anaranjado-color) ;
+        color: var(--cielo-color);
+        border-color: var(--azul2-color) ;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    font-family: 'louis';
+    font-size: 12pt;
+}
+.ModalCancelButtonCancel:hover{
+    background-color:var(--anaranjado-color) ;
+        color: var(--cielo-color);
+        border-color: var(--azul2-color) ;
+    animation: jello-horizontal 0.9s alternate both;
+}
+.ModalCancelButtonConfirm{
+    margin: 0.3em;
+    height: auto;
+    background-color: var(--azul2-color);
+    color: var(--cielo-color);
+    border-color: var(--cielo-color) ;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;  
+    font-family: 'louis';
+    font-size: 12pt;
+    }
+.ModalCancelButtonConfirm:hover{
+    background-color: var(--azul2-color);
+    color: var(--cielo-color);
+    border-color: var(--cielo-color) ;
+    animation: jello-horizontal 0.9s alternate both;
+}
+.ModalCancelPositionButton{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+.ModalCancelQuestion{
+   font-family: 'Montserrat', sans-serif; 
+    font-size: 16pt; 
+}
+
+.ModalCancelText{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 12pt;
+}
+.ModalCancelTitle{
+    font-family: 'caviar';
+    font-size: 18pt;
+    font-weight: 400;
+}
+@media screen and (min-width:768px){
+    .ModalCancelPositionButton{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .ModalCancelQuestion{
+        font-family: 'Montserrat', sans-serif; 
+         font-size: 18pt; 
+     }
+     
+     .ModalCancelText{
+         font-family: 'Montserrat', sans-serif; 
+         font-size: 14pt;
+     }
+     .ModalCancelTitle{
+         font-family: 'caviar';
+         font-size: 30pt;
+         font-weight: 600;
+     }
+     .ModalCancelButtonConfirm, .ModalCancelButtonCancel{
+        font-size: 18pt;
+     }
+     .ReservUCardButtonCancel, .ReservUCardButtonEdit{
+        font-size: 18pt;
+        margin: 0.4em auto;
+    }
+}

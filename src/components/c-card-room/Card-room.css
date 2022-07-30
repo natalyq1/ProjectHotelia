@@ -1,0 +1,113 @@
+.CardRoomButtonPricing{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    font-family: 'louis';
+    font-size: 18pt;
+    align-items:flex-start;
+}
+.CardRoomImage{
+    border-top-left-radius: 5.5%;
+    border-top-right-radius: 5.5%;
+    
+    border-top:1px solid rgba(0, 0, 0, 0.4) ;
+    /*border-left: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: 1px solid rgba(0, 0, 0, 0.4);*/
+}
+.CardRoomGeneralView{
+    width: auto;
+    height: auto;
+    background-color: var(--grisclaro-color) ;
+    margin: 1em 1em;
+    border-radius: 6%;
+    box-shadow: 3px 3px 3px rgba(51, 122, 183, 0.5);
+}
+.CardRoomTitle{
+    font-size: 24pt;
+    font-family: 'caviar';
+    font-weight: 800;
+    color: var(--azul2-color);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.7em;
+}
+.CardRoomCop{
+    font-size: 12pt;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 500;
+    color: rgba(51, 51, 51, 0.8);
+}
+.CardRoomPrice{
+    font-size: 15pt;
+    font-family: 'caviar';
+    font-weight: 800;
+    color: rgba(51, 51, 51, 0.8);
+}
+.CardRoomButtonView{
+    height: fit-content;
+    background-color: var(--cielo-color);
+    color: var(--azul2-color);
+    border-color: var(--azul2-color) ;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    font-family: 'louis';
+    font-size: 14pt;
+}
+.CardRoomButtonView:hover, .CardRoomButtonView:active, .CardRoomButtonView:visited, .CardRoomButtonView:link{
+    background-color:var(--azul2-color) ;
+    color: var(--cielo-color);
+    border-color: var(--cielo-color) ;
+}
+.CardRoomContainer{
+        width: 100%;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: row;
+        gap: 0.3rem;
+        margin-bottom: 0.7rem;
+        justify-content: center;
+    }
+.CardRoomDescriptiveText{
+    font-size: 12pt;
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center;
+    margin: 0 0.5em 0.3em 0.5em;
+}
+
+
+@media screen and (min-width:768px){
+    .CardRoomTitle{
+        font-size: 30pt;
+        font-family: 'caviar';
+        font-weight: 800;
+        color: var(--azul2-color);
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        margin-bottom: 0.7em;
+    }
+    .CardRoomCop{
+        font-size: 16pt;
+        font-family: 'Montserrat', sans-serif; 
+        font-weight: 500;
+    }
+    .CardRoomPrice{
+        font-size: 24pt;
+        font-family: 'caviar';
+        font-weight: 800;
+    }
+
+    .CardRoomGeneralView{
+        margin-bottom: 4em;
+        width: 25em;
+    }
+    .CardRoomButtonView{
+        width: 5em; 
+        font-size: 18pt;
+    }
+    .CardRoomContainer{
+        display: flex;
+        flex-direction: row;
+        gap:1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    }

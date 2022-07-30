@@ -1,0 +1,70 @@
+.DashLookupSearchAction:focus {
+    outline: none;
+}
+.DashLookupSearchAction::placeholder {
+    background-image: url(../../../assets/imgs-rooms/user-others/bx-search-alt-2.svg);
+    background-size: 20px;
+    padding: 0 0 0px 0;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.DashLookupBarSection{
+    display: flex;
+    flex-direction: row;
+    margin: 0.5em;
+    padding: 0;
+}
+.DashLookupContainerBar{
+   
+ margin: 0.5em ;
+ padding: 0;
+}
+.DashLookupBrand{
+    
+margin: 0;
+padding: 0;
+}
+.DashLookupSearchAction{
+    width: 100px;
+    background-color: var(--gris-color);
+    border-radius: 20px;
+    border: solid 1px var(--negro-color);
+    display: flex;
+    justify-content:safe;
+}
+
+
+@media screen and (min-width:768px){
+    .DashLookupBrand img{
+        width: 200px;
+    }
+    .DashLookupSearchAction{
+        width: 14rem;
+        height: 3rem;   
+    } 
+   
+    .DashLookupBarSection{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width:1024px) {
+    .DashLookupBrand img{
+        width: 250px;
+    }
+    .DashLookupSearchAction{
+        width: 15rem;
+        height: 3rem;   
+        border-radius: 25px;
+    }
+  
+    .DashLookupBrand img{
+       width: auto;
+       margin-top: 1em
+    }
+
+}
+
+

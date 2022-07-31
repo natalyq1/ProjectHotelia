@@ -18,6 +18,7 @@ root.render(
     <Routes>
     
     <Route path='/' element={<Roomsearch/>}></Route>
+    <Route path='/ProjectHotelia/' element={<Roomsearch/>}></Route>
     
     <Route path='/habitaciones' element={<Navigate replace to={"/"}/>}></Route>
     <Route path='/habitaciones/' element={<Roomsearch/>}></Route>

@@ -57,7 +57,8 @@ function CardRoom2() {
    
 
   return (
-    <><Container>  
+    <>
+    <Container>  
       {list.map((habit, idx) => (
                 <CardRoom habit={habit} key={habit._id}
                 habitaciones={idx}

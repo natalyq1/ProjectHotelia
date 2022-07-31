@@ -1,5 +1,5 @@
-import Nav from 'react-bootstrap/Nav';
-import Link from 'react-bootstrap/NavLink';
+import {Nav,Button }from 'react-bootstrap';
+import { Link } from "react-router-dom";
 import './Navbar-dashB.css';
 
 function NavbarDashboard() {
@@ -24,9 +24,9 @@ function NavbarDashboard() {
                             <div className=" row"> <Nav.Item>
                                 <Nav.Link href="/habitaciones/reservas/habitaciones" className=" DashNavOptionsButtonOpts positionNavDash" style={{ marginBottom: '0.5em'}} >Habitaciones</Nav.Link>
                             </Nav.Item> </div>
-            <Nav.Link to="/home" className='DashNavOptionsLogout'>
-                <p className='' style={{color: '#ffffff'}}><img src="https://img.icons8.com/fluency-systems-regular/48/FFFFFF/exit.png" style={{ width: '25px', height: '27px' }} /> Cerrar sesión</p>
-            </Nav.Link>
+            <Link to="/habitaciones" className='DashNavOptionsLogout'>
+                <button className='DashNavButtonLogOut'><img src="https://img.icons8.com/fluency-systems-regular/48/FFFFFF/exit.png" style={{ width: '25px', height: '27px' }} /> Cerrar sesión</button>
+            </Link>
                             </div>
                         </ul>
                     </div>

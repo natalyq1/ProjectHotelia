@@ -8,6 +8,8 @@ import Axios from "axios";
 import axios from "axios";
 
 import Modalcancelreservation from '../c-modal-cancelation/Modal-cancelation';
+import Modalconfirmreservation from '../c-modal-cancelation/Modal-confirmation';
+
 
 import './Reservation-user.css';
 function CardReservation({reservas,habitaciones,setUplist,upList,handleClose,handleOpen,setDataModal,setShow,handleShow}) {
@@ -70,7 +72,7 @@ return(
               <Card.Body>
               <div className='ReservUCardCopPrice' style={{ color: 'black' }}>
                   <h5 >
-                    Estado:<br />
+                    Estado: <br />
                   </h5>
                   <h5>
                   Reservada
@@ -159,7 +161,7 @@ return(
                   </div>
                 </section>
                 <article className="ReservUCardContainerButtons">
-                  <Button className=" ReservUCardButtonEdit" onClick={handleEdit} >Confirmar reserva</Button>
+              <Modalconfirmreservation/ >
                   
               <Modalcancelreservation/>  
               </article>

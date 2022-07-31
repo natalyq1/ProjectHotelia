@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ProjectHotelia/static/css/main.5af4746e.css",
+    "main.js": "/ProjectHotelia/static/js/main.f09cdec7.js",
+    "static/media/pexels-christopher-moon-7649103.jpg": "/ProjectHotelia/static/media/pexels-christopher-moon-7649103.96e6df856d40470f26b1.jpg",
+    "static/media/alexander-hipp-iEEBWgY_6lA-unsplash.jpg": "/ProjectHotelia/static/media/alexander-hipp-iEEBWgY_6lA-unsplash.21beb1dda1b5ca293c3b.jpg",
+    "static/media/pexels-christopher-moon-5179592.jpg": "/ProjectHotelia/static/media/pexels-christopher-moon-5179592.89c41c577c2813ea722a.jpg",
+    "static/media/a-bedroom-with-a-bed.jpg": "/ProjectHotelia/static/media/a-bedroom-with-a-bed.16edf14cbc3a188a0be3.jpg",
+    "static/media/CaviarDreams.ttf": "/ProjectHotelia/static/media/CaviarDreams.174b0a13f7e49c169450.ttf",
+    "static/media/LouisGeorgeCafe.ttf": "/ProjectHotelia/static/media/LouisGeorgeCafe.eacd87871e9a39013626.ttf",
+    "index.html": "/ProjectHotelia/index.html",
+    "static/media/bx-search-alt-2.svg": "/ProjectHotelia/static/media/bx-search-alt-2.c4f6042413d5906ab6cf.svg",
+    "main.5af4746e.css.map": "/ProjectHotelia/static/css/main.5af4746e.css.map",
+    "main.f09cdec7.js.map": "/ProjectHotelia/static/js/main.f09cdec7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5af4746e.css",
+    "static/js/main.f09cdec7.js"
+  ]
+}

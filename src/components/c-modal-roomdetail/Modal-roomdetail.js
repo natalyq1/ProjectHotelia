@@ -1,68 +1,41 @@
 
 import React from 'react';
-import './Modal-roomdetail.css'
+import './Modal-roomdetail.css';
+import {Container, Form, Modal, Row, Col, Button, Card} from 'react-bootstrap';
 
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import { useEffect, useState } from "react";
 import Room1 from '../../assets/imgs-rooms/icon8-habitaciones/a-bedroom-with-a-bed.jpg'
 
 import Axios from "axios";
 import axios from "axios";
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
-import ReservationModal from '../c-modal-confirm-reserv/ReservationModal'
 import ModalConfirmReserv from '../c-modal-confirm-reserv/ModalReser';
+//import ModalRDet2 from './ModalRD2';
 
-function ModalroomD(props,{reservas,habitaciones,setUplist,upList,handleClose,handleOpen,setDataModal,setShow,handleShow} ) {
+function ModalroomD(props,{itemrd,indexrd,reservas, habitaciones, setUplist,upList,handleClose,handleOpen,setDataModal,setShow,handleShow} ) {
   const [modalShow, setModalShow] = React.useState(false);
 
-   /*FUNCIÓN ASÍNCRONA*/
-    /*1.Definir url de api a la que me voy a conectar*/
-    const url="https://app-proyectohotelia.herokuapp.com/reservas";
-    const url2="https://app-proyectohotelia.herokuapp.com/habitaciones";
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    Axios({
+      url: "https://app-proyectohotelia.herokuapp.com/habitaciones",
+      //url:'https://jsonplaceholder.typicode.com/posts',
+    })
+      .then((response) => {
+        setList(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [setList]);
 
-    /*2. Función para borrar un registro a partir del evento botón eliminar*/
-    const handleDelete=async()=>{
-        
-        window.prompt({
-             title:'Está seguro que desea eliminar este registro?'  
-          }).then((result) => {
 
-            if (result.isConfirmed) {
-                /*Eliminando de la BD */
-                axios.delete(`${url,url2}/${reservas.id,habitaciones.id}`).then((response)=>{
-                console.log(response);
-                
-                /*Eliminando del estado */
-                  if (response.status === 200) {
-                    prompt(
-                        "cancelando"
-                    )
-                    setUplist(!upList);
-                }else {
-                    window.prompt(
-                        'Error!',
-                        'Hubo un problema al eliminar el reservas!',
-                        'error'
-                    )
-                }
-       });
-            }
-        
-          })
-        
-        
-    }
-
+  
     /*3. Función para editar un registro*/
     const handleEdit=()=>{
-        handleOpen();
-        setDataModal(reservas, habitaciones);
-    }
+      handleOpen();
+      setDataModal(reservas, habitaciones,itemrd);
+  }
   return (
     <>
     <Modal
@@ -86,6 +59,7 @@ function ModalroomD(props,{reservas,habitaciones,setUplist,upList,handleClose,ha
             COP<br />
           </h4>
           <h4>
+          
             $110.000
           </h4>
         </div>
@@ -154,7 +128,9 @@ function ModalroomD(props,{reservas,habitaciones,setUplist,upList,handleClose,ha
         <section className='' >
         <Button className="btn ModalRDButtonEdit" ><img  src="https://img.icons8.com/material-rounded/24/337AB7/edit--v1.png" style={{ width: '', height: '20px', font:'VAR(--AZUL2-COLOR)' }} /> Editar</Button>
         
-<ModalConfirmReserv  />
+<ModalConfirmReserv 
+show={modalShow}
+        onHide={() => setModalShow(false)} />
 </section>
       </Modal.Footer>
     </Modal>

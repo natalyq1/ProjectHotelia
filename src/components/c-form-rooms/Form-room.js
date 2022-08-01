@@ -1,8 +1,16 @@
 import './Form-room.css'
+import React, { useState } from 'react';
+
+
+import Button from 'react-bootstrap/Button';
 
 function Formcheck() {
 
+    const [show, setShow] = useState(false);
 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
 
 return (
     <>
@@ -32,7 +40,8 @@ return (
 
                 </article>
                 <section className="FormLookupContainerButton">
-                    <button type="submit" className="btn FormLookupButton ">Ver habitaciones disponibles</button>
+                    <Button type="submit" className=" FormLookupButton " onClick={handleShow}>Ver habitaciones disponibles</Button>
+                    
                 </section>
 
             </div>

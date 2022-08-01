@@ -25,8 +25,13 @@ root.render(
     
     <Route path='/habitaciones/reservas' element={<Dash2/>}></Route>
     <Route path='/habitaciones/reservas/misreservas' activeKey="active" element={<Dash2/>}></Route>
+
+
+    
+
   </Routes  >
   </BrowserRouter>
 );
 
 
+{/*<Route path='/api' element={<Inicio/>}></Route>*/}

@@ -37,8 +37,9 @@
     font-family: 'louis';
     font-size: 16pt;
 }
-.FormLookupButton:hover{
-        color: var(--azul2-color);
+.FormLookupButton:hover, .FormLookupButton:active{
+        color: var(--cielo-color);
+        background-color: var(--azul2-color);
         border-color: var(--cielo-color) ;
     }
 .FormLookupFontName{

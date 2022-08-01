@@ -1,16 +1,16 @@
 import './Card-room.css';
 import React from 'react';
 
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import {Container, Form, Modal, Row, Col, Button, Card} from 'react-bootstrap';
 
+import { useEffect, useState } from "react";
 import Room1 from '../../assets/imgs-rooms/icon8-habitaciones/a-bedroom-with-a-bed.jpg'
-import ModalroomD from '../../components/c-modal-roomdetail/Modal-roomdetail';
 
 import Axios from "axios";
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { Container,Row } from 'react-bootstrap';
+
+import ModalroomD from '../../components/c-modal-roomdetail/Modal-roomdetail';
+//import ModalRDet2 from '../../components/c-modal-roomdetail/ModalRD2'
 
 function Cardroom({item, habit, reservas,habitaciones,setUplist,upList,handleClose,handleOpen,setDataModal,setShow,handleShow}) {
   const [modalShow, setModalShow] = React.useState(false);
@@ -135,8 +135,9 @@ function Cardroom({item, habit, reservas,habitaciones,setUplist,upList,handleClo
         </section>
         </Container>
      
-
+{ /*ModalRDet2*/}
       <ModalroomD
+       
         show={modalShow}
         onHide={() => setModalShow(false)}
       />

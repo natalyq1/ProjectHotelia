@@ -60,7 +60,9 @@ function CardRoom2() {
     <>
     <Container>  
       {list.map((habit, idx) => (
-                <CardRoom habit={habit} key={habit._id}
+                <CardRoom 
+                habit={habit} 
+                key={habit._id}
                 habitaciones={idx}
                 setUplist={setUplist}
                 upList={upList}

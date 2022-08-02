@@ -7,15 +7,15 @@ function MenuDashboard() {
 
     return (
         <>
-        <div className='DashMenuUserContainer'>
-            <div>
-                <Link to="/" className=''></Link>
-                <img src={perfil} alt="Imagen de perfil" />
-                <p className='DashMenuUserTextWelcome' style={{ textAlign: 'center' }}>Bienvenido</p>
-                <p className='DashMenuUserNameUser'style={{ textAlign: 'center' }}>Luis Gomez</p>
+            <div className='DashMenuUserContainer'>
+                <div>
+                    <Link to="/" className=''></Link>
+                    <img src={perfil} alt="Imagen de perfil" />
+                    <p className='DashMenuUserTextWelcome' style={{ textAlign: 'center' }}>Bienvenido</p>
+                    <p className='DashMenuUserNameUser' style={{ textAlign: 'center' }}>Luis Gomez</p>
+                </div>
+                <NavbarDashboard />
             </div>
-            <NavbarDashboard/>
-        </div>
         </>
     );
 }

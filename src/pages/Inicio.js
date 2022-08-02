@@ -1,12 +1,12 @@
 import Navbar from "../components/c-navbar/Navbar";
 import App from '../App';
-function Inicio(){
-    return(
+function Inicio() {
+    return (
         <>
-        <Navbar />
-        <App />
+            <Navbar />
+            <App />
         </>
-        )
-    }
-    
+    )
+}
+
 export default Inicio;

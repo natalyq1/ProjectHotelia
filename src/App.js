@@ -31,7 +31,7 @@ function App() {
             <p>{item.nombrehab}</p>
             <p>${item.totalreserva}</p>
             <p>${item.totalreserva}</p>
-            
+
           </div>
         ))}
       </div>

@@ -9,24 +9,24 @@ function Dash2() {
     return (
         <div>
             <Container >
-            <Row>
-            <Col xs={3}> 
-            <MenuDashboard /> 
-            </Col>
-            
-            
-            <Col > 
-            <Listrooms />
-            <Container className="container-fluid">
                 <Row>
-                   <Col >
-                    
-            <Reservation2 />
-            </Col> 
-           </Row>
-            </Container>
-            </Col> </Row>
-            
+                    <Col xs={3}>
+                        <MenuDashboard />
+                    </Col>
+
+
+                    <Col >
+                        <Listrooms />
+                        <Container className="container-fluid">
+                            <Row>
+                                <Col >
+
+                                    <Reservation2 />
+                                </Col>
+                            </Row>
+                        </Container>
+                    </Col> </Row>
+
             </Container>
         </div>
     );

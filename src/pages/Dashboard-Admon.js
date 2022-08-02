@@ -3,9 +3,9 @@ import Reservationuser from '../components/reserv-user/Reservation-user';
 function Dashboard() {
     return (
         <div>
-            
 
-<Reservationuser />
+
+            <Reservationuser />
         </div>
     );
 }

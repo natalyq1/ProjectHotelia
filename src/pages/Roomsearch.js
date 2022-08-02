@@ -6,18 +6,18 @@ import CallModal from '../components/c-modal-roomdetail/Modal-roomdetail';
 import CardRoom2 from "../components/c-card-room/CardR2";
 import Footer from '../components/footer/Footer';
 
-function Roomsearch(){
-    return(
+function Roomsearch() {
+    return (
         <>
-        <Navbar />
-        <Formcheck />
-    {/*<Cardroom />*/}
-    <CardRoom2 />
-    <CallModal />
-    
-    <Footer />
+            <Navbar />
+            <Formcheck />
+            {/*<Cardroom />*/}
+            <CardRoom2 />
+            <CallModal />
+
+            <Footer />
         </>
-        )
-    }
-    
-    export default Roomsearch;
+    )
+}
+
+export default Roomsearch;

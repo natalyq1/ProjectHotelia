@@ -1,7 +1,7 @@
 import './Card-room.css';
 import React from 'react';
 
-import {Container, Form, Modal, Row, Col, Button, Card} from 'react-bootstrap';
+import { Container, Form, Modal, Row, Col, Button, Card } from 'react-bootstrap';
 
 import { useEffect, useState } from "react";
 import Room1 from '../../assets/imgs-rooms/icon8-habitaciones/a-bedroom-with-a-bed.jpg'
@@ -12,7 +12,7 @@ import axios from "axios";
 import ModalroomD from '../../components/c-modal-roomdetail/Modal-roomdetail';
 //import ModalRDet2 from '../../components/c-modal-roomdetail/ModalRD2'
 
-function Cardroom({item, habit, reservas,habitaciones,setUplist,upList,handleClose,handleOpen,setDataModal,setShow,handleShow}) {
+function Cardroom({ item, habit, reservas, habitaciones, setUplist, upList, handleClose, handleOpen, setDataModal, setShow, handleShow }) {
   const [modalShow, setModalShow] = React.useState(false);
 
   const [list, setList] = useState([]);
@@ -30,59 +30,56 @@ function Cardroom({item, habit, reservas,habitaciones,setUplist,upList,handleClo
   }, [setList]);
 
 
-  
-    /*3. Función para editar un registro*/
-    const handleEdit=()=>{
-      handleOpen();
-      setDataModal(reservas, habitaciones);
+
+  /*3. Función para editar un registro*/
+  const handleEdit = () => {
+    handleOpen();
+    setDataModal(reservas, habitaciones);
   }
 
 
   return (
     <>
+      <section className='CardRoomContainer' >
 
+        <Container className='container-fluid row-fluid'>
 
-    
-<section className='CardRoomContainer' >
-          
-          <Container className='container-fluid row-fluid'>
-    
-        <Card className='CardRoomGeneralView'>
-          <Card.Img variant="top" className='CardRoomImage' 
-          src={`https://app-proyectohotelia.herokuapp.com${habit.img}`}/>
-          <Card.Body>
-            <Card.Title className='CardRoomTitle' style={{ textAlign: 'center' }}>{habit.nombrehab} </Card.Title>
-            
-                    <p className='CardRoomDescriptiveText'>{habit.descripcion} </p>
-            <div className='CardRoomState' >
-            <h6 >
-                    Estado:
-                  </h6>
-                  <h6>
+          <Card className='CardRoomGeneralView'>{/*alt="https://www.pexels.com/es-es/"*/}
+            <Card.Img variant="top" className='CardRoomImage'
+              src={`https://app-proyectohotelia.herokuapp.com${habit.img}`}  />
+            <Card.Body>
+              <Card.Title className='CardRoomTitle' style={{ textAlign: 'center' }}>{habit.nombrehab} </Card.Title>
+
+              <p className='CardRoomDescriptiveText'>{habit.descripcion} </p>
+              <div className='CardRoomState' >
+                <h6 >
+                  Estado:
+                </h6>
+                <h6>
                   {habit.estado}
-                  </h6>
-               </div> 
-               <div className='CardRoomButtonPricing'>
-            <Card.Text className='CardRoomCop'>
-                COP<br />
-                noche
-              </Card.Text>
-              <Card.Text className='CardRoomPrice'  >
-              ${habit.valornoche}
-              
-              </Card.Text>
-              <Button className=' CardRoomButtonView'
-                variant="primary" onClick={() => setModalShow(true)}>VER</Button>
-            </div>
-          </Card.Body>
+                </h6>
+              </div>
+              <div className='CardRoomButtonPricing'>
+                <Card.Text className='CardRoomCop'>
+                  COP<br />
+                  noche
+                </Card.Text>
+                <Card.Text className='CardRoomPrice'  >
+                  ${habit.valornoche}
+
+                </Card.Text>
+                <Button className=' CardRoomButtonView'
+                  variant="primary" onClick={() => setModalShow(true)}>VER</Button>
+              </div>
+            </Card.Body>
           </Card>
-          
+
         </Container>
-        </section>
-     
-{ /*ModalRDet2*/}
+      </section>
+
+      { /*ModalRDet2*/}
       <ModalroomD
-       
+
         show={modalShow}
         onHide={() => setModalShow(false)}
       />

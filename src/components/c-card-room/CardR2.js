@@ -58,7 +58,8 @@ function CardRoom2() {
 
   return (
     <>
-    <Container>  
+     <Container >
+      
       {list.map((habit, idx) => (
                 <CardRoom 
                 habit={habit} 
@@ -71,7 +72,8 @@ function CardRoom2() {
             setDataModal={setDataModal} />
             ))}     
      
-         
+       
+       
 </Container>
 
     

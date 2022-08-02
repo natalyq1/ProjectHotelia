@@ -19,10 +19,9 @@ function ReservationModal() {
 /*FUNCIÓN ASÍNCRONA*/
     /*1.Definir url de api a la que me voy a conectar*/
     const url="https://app-proyectohotelia.herokuapp.com/reservas";
-    const url2="https://app-proyectohotelia.herokuapp.com/habitaciones";
-    /*2.Generar funcion asincrona para conectar al API*/
+     /*2.Generar funcion asincrona para conectar al API*/
     const getData=async()=>{
-      const response=axios.get(url,url2);
+      const response=axios.get(url);
       return response;
   }
       /*3.(hook)UseState para guardar la respuesta de la peticion*/
@@ -89,6 +88,7 @@ console.log(list);
                  key={index}
                  reservas={es}
                  habitaciones={es}
+                 users={es}
                  setUplist={setUplist}
                  upList={upList}
                  handleClose={handleClose}

@@ -10,13 +10,12 @@ import Axios from "axios";
 import axios from "axios";
 
 import './ReservationModal.css';
-function ModalConfirmReserv({reservas,habitaciones,users,setUplist,upList,handleOpen,setDataModal}) {
+function ModalConfirmReserv({index,reservas,habitaciones,users,setUplist,upList,handleOpen,setDataModal}) {
 
  /*FUNCIÓN ASÍNCRONA*/
     /*1.Definir url de api a la que me voy a conectar*/
     const url="https://app-proyectohotelia.herokuapp.com/users";
-    const url2="https://app-proyectohotelia.herokuapp.com/habitaciones";
-
+    
     /*2. Función para borrar un registro a partir del evento botón eliminar*/
     const handleDelete=async()=>{
         
@@ -26,7 +25,7 @@ function ModalConfirmReserv({reservas,habitaciones,users,setUplist,upList,handle
 
             if (result.isConfirmed) {
                 /*Eliminando de la BD */
-                axios.delete(`${url,url2}/${reservas.id,habitaciones.id, users.id}`).then((response)=>{
+                axios.delete(`${url}/${index,reservas.id,habitaciones.id, users.id}`).then((response)=>{
                 console.log(response);
                 
                 /*Eliminando del estado */
@@ -53,7 +52,7 @@ function ModalConfirmReserv({reservas,habitaciones,users,setUplist,upList,handle
     /*3. Función para editar un registro*/
     const handleEdit=()=>{
         handleOpen();
-        setDataModal(reservas, habitaciones,users);
+        setDataModal(index, reservas, habitaciones,users);
     }
 
 
@@ -86,7 +85,7 @@ centered>
         <div class="rendered-form">
     <div class="formbuilder-text form-group field-usuario">
         <label for="usuario" class="formbuilder-text-label">Usuario:</label>
-        <input type="text" placeholder="nombre y apellido" class="form-control" name="usuario" access="false" id="usuario"></input>
+        <input type="text" placeholder="nombre usuario{reservas.valornoche}" class="form-control" name="usuario" access="false" id="usuario"></input>
     </div>
     <div class="formbuilder-text form-group field-telefono">
         <label for="telefono" class="formbuilder-text-label">Teléfono de contacto:</label>

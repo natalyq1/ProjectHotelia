@@ -48,7 +48,7 @@ function Cardroom({item, habit, reservas,habitaciones,setUplist,upList,handleClo
 
         <Card className='CardRoomGeneralView'>
           <Card.Img variant="top" className='CardRoomImage' 
-          src="https://github.com/natalyq1/ProjectHotelia/blob/master/src/assets/imgs-rooms/pexel/pexels-terry-magallanes-2631746.jpg?raw=true"/>
+          src={`https://app-proyectohotelia.herokuapp.com${habit.img}`}/>
           <Card.Body>
             <Card.Title className='CardRoomTitle' style={{ textAlign: 'center' }}>{habit.nombrehab} </Card.Title>
             
@@ -75,7 +75,7 @@ function Cardroom({item, habit, reservas,habitaciones,setUplist,upList,handleClo
             </div>
           </Card.Body>
           </Card>
-        {/**/}
+        {/*
         <Card className='CardRoomGeneralView'>
           <Card.Img variant="top" className='CardRoomImage' 
           src="https://github.com/natalyq1/ProjectHotelia/blob/master/src/assets/imgs-rooms/pexel/pexels-jean-van-der-meulen-1454806.jpg?raw=true"/>
@@ -130,7 +130,7 @@ function Cardroom({item, habit, reservas,habitaciones,setUplist,upList,handleClo
                 variant="primary" onClick={() => setModalShow(true)}>VER</Button>
             </div>
           </Card.Body>
-        </Card>
+        </Card>*/}
       
         </section>
         </Container>

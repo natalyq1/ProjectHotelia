@@ -1,4 +1,4 @@
-
+import ReactDOM from 'react-dom/client';
 import React from 'react';
 import './Modal-roomdetail.css';
 import {Container, Form, Modal, Row, Col, Button, Card} from 'react-bootstrap';
@@ -10,31 +10,19 @@ import Axios from "axios";
 import axios from "axios";
 
 import ModalConfirmReserv from '../c-modal-confirm-reserv/ModalReser';
-//import ModalRDet2 from './ModalRD2';
 
-function ModalroomD(props,{itemrd,indexrd,reservas, habitaciones, setUplist,upList,handleClose,handleOpen,setDataModal,setShow,handleShow} ) {
+
+function ModalroomD(props,{item,reservas, habitaciones, setUplist,uplist,handleClose,handleOpen,setDataModal,setShow,handleShow}){
   const [modalShow, setModalShow] = React.useState(false);
 
-  const [list, setList] = useState([]);
-  useEffect(() => {
-    Axios({
-      url: "https://app-proyectohotelia.herokuapp.com/habitaciones",
-      //url:'https://jsonplaceholder.typicode.com/posts',
-    })
-      .then((response) => {
-        setList(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [setList]);
+  const [list, setlist] = useState([]);
+  /*1. Crear petición asíncrona*/
+  const url2="https://app-proyectohotelia.herokuapp.com/habitaciones"; 
 
-
-  
-    /*3. Función para editar un registro*/
-    const handleEdit=()=>{
+  /*3. Función para editar un registro*/
+  const handleEdit=()=>{
       handleOpen();
-      setDataModal(reservas, habitaciones,itemrd);
+      setDataModal(item);
   }
   return (
     <>
@@ -126,7 +114,7 @@ function ModalroomD(props,{itemrd,indexrd,reservas, habitaciones, setUplist,upLi
       </Modal.Body>
       <Modal.Footer>
         <section className='' >
-        <Button className="btn ModalRDButtonEdit" ><img  src="https://img.icons8.com/material-rounded/24/337AB7/edit--v1.png" style={{ width: '', height: '20px', font:'VAR(--AZUL2-COLOR)' }} /> Editar</Button>
+        <Button className="btn ModalRDButtonEdit" ><img src="https://img.icons8.com/material-rounded/24/337AB7/edit--v1.png" style={{ width: '', height: '20px', font:'VAR(--AZUL2-COLOR)' }} /> Editar</Button>
         
 <ModalConfirmReserv 
 show={modalShow}

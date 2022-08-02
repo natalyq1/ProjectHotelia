@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ProjectHotelia/static/css/main.9ef9d66e.css",
-    "main.js": "/ProjectHotelia/static/js/main.7217735b.js",
+    "main.js": "/ProjectHotelia/static/js/main.aab5615d.js",
     "static/media/pexels-christopher-moon-7649103.jpg": "/ProjectHotelia/static/media/pexels-christopher-moon-7649103.96e6df856d40470f26b1.jpg",
     "static/media/alexander-hipp-iEEBWgY_6lA-unsplash.jpg": "/ProjectHotelia/static/media/alexander-hipp-iEEBWgY_6lA-unsplash.21beb1dda1b5ca293c3b.jpg",
     "static/media/pexels-christopher-moon-5179592.jpg": "/ProjectHotelia/static/media/pexels-christopher-moon-5179592.89c41c577c2813ea722a.jpg",
@@ -11,10 +11,10 @@
     "index.html": "/ProjectHotelia/index.html",
     "static/media/bx-search-alt-2.svg": "/ProjectHotelia/static/media/bx-search-alt-2.c4f6042413d5906ab6cf.svg",
     "main.9ef9d66e.css.map": "/ProjectHotelia/static/css/main.9ef9d66e.css.map",
-    "main.7217735b.js.map": "/ProjectHotelia/static/js/main.7217735b.js.map"
+    "main.aab5615d.js.map": "/ProjectHotelia/static/js/main.aab5615d.js.map"
   },
   "entrypoints": [
     "static/css/main.9ef9d66e.css",
-    "static/js/main.7217735b.js"
+    "static/js/main.aab5615d.js"
   ]
 }

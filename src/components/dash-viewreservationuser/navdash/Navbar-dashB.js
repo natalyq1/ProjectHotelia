@@ -16,16 +16,16 @@ function NavbarDashboard() {
                             <div className="container">
                                 <div className=" row">
                                     <Nav.Item>
-                                        <Nav.Link href="/habitaciones/reservas/perfil" className=" DashNavOptionsButtonOpts positionNavDash" style={{ marginBottom: '0.5em' }} >Perfil</Nav.Link>
+                                        <Link href="/habitaciones/reservas/perfil" className=" DashNavOptionsButtonOpts positionNavDash" style={{ marginBottom: '0.5em' }} >Perfil</Link>
                                     </Nav.Item></div>
                                 <div className="row">
                                     <Nav.Item>
-                                    <Nav.Link href="/habitaciones/reservas" className=" DashNavOptionsButtonOpts  positionNavDash" style={{ marginBottom: '0.5em' }}>Mis reservas</Nav.Link>
+                                    <Link href="/habitaciones/reservas" className=" DashNavOptionsButtonOpts  positionNavDash" style={{ marginBottom: '0.5em' }}>Mis reservas</Link>
                                 </Nav.Item>
                                 </div>
                                 <div className=" row"> 
                                 <Nav.Item>
-                                    <Nav.Link href="/habitaciones" className=" DashNavOptionsButtonOpts positionNavDash" style={{ marginBottom: '0.5em' }} >Habitaciones</Nav.Link>
+                                    <Link href="/habitaciones" className=" DashNavOptionsButtonOpts positionNavDash" style={{ marginBottom: '0.5em' }} >Habitaciones</Link>
                                 </Nav.Item> 
                                 </div>
                                 <Link to="/" className='DashNavOptionsLogout'>

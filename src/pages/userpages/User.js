@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Container, Form, Modal, Row, Col} from "react-bootstrap";
-import ListEstudiantes from "../../components/userInfo/ListUser";
+import ListHost from "../../components/userInfo/ListUser";
 import MenuDashboard from "../../components/dash-viewreservationuser/menudash/Menu-dashB";
 import Listrooms from "../../components/dash-viewreservationuser/barlookup/BarLookup";
 
@@ -21,7 +21,7 @@ function User() {
                     <Listrooms />
                     
 
-<ListEstudiantes />
+<ListHost />
 
 
 <Link to="/newuser" className="btn btn-info m-3">Usuario nuevo</Link>

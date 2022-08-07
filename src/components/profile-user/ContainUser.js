@@ -30,9 +30,7 @@ function ContainerUser({ reservas, habitaciones, setUplist, upList, handleClose,
       <section className='ReservUCardContainer' >
 
         <Container className='container-fluid row-fluid'>
-       
-
-
+      
         </Container>
 
       </section>

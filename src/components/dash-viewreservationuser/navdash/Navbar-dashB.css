@@ -19,6 +19,7 @@
     background-color: var(--anaranjado-color);
     margin:0 0;
     font-family: 'louis';
+    display: block;
     color: var(--negro-color);
     text-align: center;
     font-size: 20px;

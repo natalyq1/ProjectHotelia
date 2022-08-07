@@ -27,7 +27,7 @@ root.render(
       <Route path='/habitaciones/'element={<Navigate replace to={"/"} />}></Route>
 
       <Route path='/habitaciones/reservas' element={<Dash2 />}></Route>
-      <Route path='/habitaciones/reservas/misreservas'  element={<Dash2 />}></Route>
+      <Route path='/habitaciones/reservas/misreservas'  element={<Navigate replace to={"/habitaciones/reservas"} />}></Route>
     
       <Route path='/habitaciones/reservas/perfil' element={<User />}></Route>
       <Route path='/newuser'  element={<FormEstudiante />}></Route>

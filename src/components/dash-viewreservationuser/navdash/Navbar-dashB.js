@@ -20,7 +20,7 @@ function NavbarDashboard() {
                                     </Nav.Item></div>
                                 <div className="row">
                                     <Nav.Item>
-                                    <Link href="/habitaciones/reservas" className=" DashNavOptionsButtonOpts  positionNavDash" style={{ marginBottom: '0.5em' }}>Mis reservas</Link>
+                                    <Link href="/habitaciones/reservas/misreservas" className=" DashNavOptionsButtonOpts  positionNavDash" style={{ marginBottom: '0.5em' }}>Mis reservas</Link>
                                 </Nav.Item>
                                 </div>
                                 <div className=" row"> 

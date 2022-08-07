@@ -26,10 +26,10 @@ root.render(
       <Route path='/habitaciones/' element={<Roomsearch />}></Route>
 
       <Route path='/habitaciones/reservas' element={<Dash2 />}></Route>
-      <Route path='/habitaciones/reservas/misreservas' activeKey="active" element={<Dash2 />}></Route>
+      <Route path='/habitaciones/reservas/misreservas'  element={<Dash2 />}></Route>
     
-      <Route path='/habitaciones/reservas/perfil' activeKey="active" element={<User />}></Route>
-      <Route path='/newuser' activeKey="active" element={<FormEstudiante />}></Route>
+      <Route path='/habitaciones/reservas/perfil' element={<User />}></Route>
+      <Route path='/newuser'  element={<FormEstudiante />}></Route>
     </Routes  >
   </BrowserRouter>
 );

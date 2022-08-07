@@ -106,7 +106,7 @@ function ModalConfirmReserv({ index, reservas, habitaciones, users, setUplist, u
                         <Link to="#">
                             <Button className=" ModalReservButtonCancel"> Cancelar</Button>
                         </Link>
-                        <Link to="habitaciones/reservas" className="">
+                        <Link to="/habitaciones/reservas" className="">
                             <Button className=" ModalReserButtonConfirm" >Reservar </Button>
                         </Link>
                     </div>

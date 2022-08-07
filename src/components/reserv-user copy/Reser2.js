@@ -1,4 +1,3 @@
-
 import Room1 from '../../assets/imgs-rooms/pexel/pexels-christopher-moon-7649103.jpg'
 import Room2 from '../../assets/imgs-rooms/pexel/pexels-christopher-moon-5179592.jpg'
 

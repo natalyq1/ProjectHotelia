@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/c-navbar/Navbar';
 import Inicio from './pages/Inicio';
 import Roomsearch from './pages/Roomsearch';
+import User from './pages/userpages/User';
+import FormEstudiante from './pages/userpages/FormEstudiantes';  
 
 import Dash2 from './pages/Dash';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,7 +27,9 @@ root.render(
 
       <Route path='/habitaciones/reservas' element={<Dash2 />}></Route>
       <Route path='/habitaciones/reservas/misreservas' activeKey="active" element={<Dash2 />}></Route>
-      
+    
+      <Route path='/habitaciones/reservas/perfil' activeKey="active" element={<User />}></Route>
+      <Route path='/newuser' activeKey="active" element={<FormEstudiante />}></Route>
     </Routes  >
   </BrowserRouter>
 );

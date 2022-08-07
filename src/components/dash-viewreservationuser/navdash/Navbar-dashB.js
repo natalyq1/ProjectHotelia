@@ -18,13 +18,17 @@ function NavbarDashboard() {
                                     <Nav.Item>
                                         <Nav.Link href="/habitaciones/reservas/perfil" className=" DashNavOptionsButtonOpts positionNavDash" style={{ marginBottom: '0.5em' }} >Perfil</Nav.Link>
                                     </Nav.Item></div>
-                                <div className="row"><Nav.Item>
-                                    <Nav.Link activeKey="active" activehref="/habitaciones/reservas/misreservas" className=" DashOptionActive  positionNavDash" style={{ marginBottom: '0.5em' }}>Mis reservas</Nav.Link>
-                                </Nav.Item></div>
-                                <div className=" row"> <Nav.Item>
-                                    <Nav.Link href="/habitaciones/reservas/habitaciones" className=" DashNavOptionsButtonOpts positionNavDash" style={{ marginBottom: '0.5em' }} >Habitaciones</Nav.Link>
-                                </Nav.Item> </div>
-                                <Link to="/habitaciones" className='DashNavOptionsLogout'>
+                                <div className="row">
+                                    <Nav.Item>
+                                    <Nav.Link href="/habitaciones/reservas" className=" DashNavOptionsButtonOpts  positionNavDash" style={{ marginBottom: '0.5em' }}>Mis reservas</Nav.Link>
+                                </Nav.Item>
+                                </div>
+                                <div className=" row"> 
+                                <Nav.Item>
+                                    <Nav.Link href="/habitaciones" className=" DashNavOptionsButtonOpts positionNavDash" style={{ marginBottom: '0.5em' }} >Habitaciones</Nav.Link>
+                                </Nav.Item> 
+                                </div>
+                                <Link to="/" className='DashNavOptionsLogout'>
                                     <button className='DashNavButtonLogOut'><img src="https://img.icons8.com/fluency-systems-regular/48/FFFFFF/exit.png" style={{ width: '25px', height: '27px' }} /> Cerrar sesión</button>
                                 </Link>
                             </div>

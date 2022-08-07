@@ -17,13 +17,7 @@ function Listrooms() {
                 </div>
 
             </article>
-            <title className='ReservUTitle ' id="contained-modal-title-vcenter">
-                <p>Reservas</p>
-                <Link to="/habitaciones" className="">
-                    <Button className="ReservUButtonNewReserv"  >
-                        <img src="https://img.icons8.com/material-outlined/24/337ab7/plus--v1.png" style={{ width: '25px', height: '25px' }} /> Nueva reserva</Button>
-                </Link>
-            </title>
+            
         </>
     );
 }

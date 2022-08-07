@@ -46,4 +46,8 @@ html{
   font-family: 'caviar';
   src: url(./utils/typography/CaviarDreams.ttf);
 }
-
+.TextUserInfo{
+  font-size: 12pt;
+  font-family: 'Montserrat', sans-serif; 
+  margin: 0 0.5em 0.3em 0.5em;
+}

@@ -20,10 +20,11 @@ root.render(
     <Routes>
 
       <Route path='/' element={<Roomsearch />}></Route>
+      <Route path='/'element={<Navigate replace to={"/"} />}></Route>
       <Route path='/ProjectHotelia/' element={<Roomsearch />}></Route>
 
-      <Route path='/habitaciones' element={<Navigate replace to={"/"} />}></Route>
-      <Route path='/habitaciones/' element={<Roomsearch />}></Route>
+      <Route path='/habitaciones' element={<Roomsearch />}> </Route>
+      <Route path='/habitaciones/'element={<Navigate replace to={"/"} />}></Route>
 
       <Route path='/habitaciones/reservas' element={<Dash2 />}></Route>
       <Route path='/habitaciones/reservas/misreservas'  element={<Dash2 />}></Route>

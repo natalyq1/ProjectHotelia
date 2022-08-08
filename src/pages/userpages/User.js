@@ -24,7 +24,7 @@ function User() {
 <ListHost />
 
 
-{/*<Link to="/newuser" className="btn btn-info m-3">Usuario nuevo</Link>*/}
+
  
                 </Col> </Row>
 

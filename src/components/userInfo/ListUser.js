@@ -44,12 +44,12 @@ function ListHost() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await axios.put(`${url}/${dataModal.id}`, dataModal);
+        const response = await axios.put(`${url}`, dataModal);
         console.log(response);
         if (response.status === 200) {
             Swal.fire(
                 'Cambio Guardado!',
-                `La información de <strong> ${response.data.nombre} ${response.data.apellido}</strong> ha sido actualizado exitosamente!`,
+                `La información se ha sido actualizado exitosamente!`,
                 'success'
             )
             handleClose();
@@ -76,8 +76,7 @@ function ListHost() {
     return (
         <Container>
             {
-                
-                    <InfoHuesped
+                        <InfoHuesped
                         
                         huesped={list}
                         setUplist={setUplist}

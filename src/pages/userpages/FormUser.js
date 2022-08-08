@@ -34,20 +34,20 @@ const navigate=useNavigate();
         //console.log(response)
         if(response.status===201){
             Swal.fire(
-                'Guardado!',
-                ` <strong>
-                ${response.data.nombre} ${response.data.apellido}
-                </strong>
-                ha sido guardado exitosamente!`,
-                    'success'
+                'Error!',
+                `Hubo un problema al registrar el huésped!`,
+                    'error'
+                
             )
-                navigate("/newuser");
+                
         }else{
             Swal.fire(
-                'Error!',
-                `Hubo un problema al actualizar el huésped!`,
-                    'error'
+                'Guardado!',
+                ` <strong>
+                Ha sido registrado exitosamente!`,
+                    'success'
             )
+            navigate("/habitaciones");
         }
     }
 

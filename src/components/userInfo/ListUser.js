@@ -8,15 +8,11 @@ import { Link } from "react-router-dom";
 function ListHost() {
     /*FUNCIÓN ASÍNCRONA*/
     /*1.Definir url de api a la que me voy a conectar*/
-    const url = "http://localhost:5000/estudiantes";
-    /*const url="https://app-proyectohotelia.herokuapp.com/users/997512"; 
+    /*const url = "http://localhost:5000/estudiantes";*/
+    const url="https://app-proyectohotelia.herokuapp.com/users/997512"; 
     
     
-    const arr = 'https://app-proyectohotelia.herokuapp.com/users/997512';
-    
-    const result = Array.isArray(arr) ? arr.map(element => element + 1) : [];
-    
-    console.log("este dice si es array"+result);*/
+  
     /*2.Generar funcion asincrona para conectar al API*/
     const getData = async () => {
         const response = axios.get(url);
@@ -63,7 +59,7 @@ function ListHost() {
             Swal.fire(
                 'Error!',
                 'Hubo un problema al actualizar',
-                'error'
+                'intenta de nuevo.'
             )
         }
     }
@@ -76,38 +72,22 @@ function ListHost() {
     }, [upList])//se actualiza cada vez q se cambie el estado upList
     console.log(list);
 
+
     return (
         <Container>
-
-            {/* <table className="table table-striped">
-         <thead>
-                    <th>No.</th>
-                    <th>Foto</th>
-                    <th>Nombre completo</th>
-                    <th>Tipo documento</th>
-                    <th>No. documento</th>
-                    <th>Perfil</th>
-                    <th colSpan="2">Acciones</th>
-             </thead>    
-                           <tbody> */}
-
-
-
             {
-                list.map((es, index) => (
+                
                     <InfoHuesped
-                        key={index}
-                        huesped={es}
+                        
+                        huesped={list}
                         setUplist={setUplist}
                         upList={upList}
                         handleClose={handleClose}
                         handleOpen={handleOpen}
                         setDataModal={setDataModal}
                     />
-                ))
+                
             }
-            {/*</tbody> 
-</table> */}
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -140,7 +120,7 @@ function ListHost() {
                             <Form.Control
                                 type="text"
                                 placeholder="Ingrese su fecha de nacimiento"
-                                name="numdoc"
+                                name="fnacimiento"
                                 value={dataModal.fnacimiento}
                                 onChange={handleChangeModal} />
                         </Form.Group>
@@ -162,7 +142,7 @@ function ListHost() {
                             <Form.Control
                                 type="text"
                                 placeholder="Ingrese su número de documento"
-                                name="numdoc"
+                                name="_id"
                                 value={dataModal._id}
                                 onChange={handleChangeModal} />
                         </Form.Group>
@@ -208,23 +188,43 @@ function ListHost() {
                         </Form.Group>
 
                         <Form.Group className="mb-3">
+                            <Form.Label>Contraseña:</Form.Label>
+                            <Form.Control
+                                type="password"
+                                placeholder="Ingrese su país de origen"
+                                name="password"
+                                value={dataModal.password}
+                                onChange={handleChangeModal} />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3">
+                            <Form.Label>Usuario tipo:</Form.Label>
+                            <Form.Control
+                                type="text"
+                                placeholder={dataModal.tipouser}
+                                name="tipouser"
+                                value={dataModal.tipouser}
+                                onChange={handleChangeModal} />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3">
                             <Form.Label>Foto</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Ingrese su foto"
-                                name="foto"
+                                name="img"
                                 value={dataModal.img}
                                 onChange={handleChangeModal} />
                         </Form.Group>
 
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button className="btn ModalCancelButtonCancel" onClick={handleClose}>
+                        <button className="btn ModalCancelButtonCancel" onClick={handleClose}>
                             Cancelar
-                        </Button>
-                        <Button className="btn ModalCancelButtonConfirm" type="submit">
+                        </button>
+                        <button className="btn ModalCancelButtonConfirm" type="submit">
                             Guardar Cambios
-                        </Button>
+                        </button>
                     </Modal.Footer>
                 </Form>
             </Modal>

@@ -8,7 +8,7 @@ import Navbar from './components/c-navbar/Navbar';
 import Inicio from './pages/Inicio';
 import Roomsearch from './pages/Roomsearch';
 import User from './pages/userpages/User';
-import FormEstudiante from './pages/userpages/FormEstudiantes';  
+import FormUser from './pages/userpages/FormUser';  
 
 import Dash2 from './pages/Dash';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -30,7 +30,7 @@ root.render(
       <Route path='/habitaciones/reservas/misreservas'  element={<Navigate replace to={"/habitaciones/reservas"} />}></Route>
     
       <Route path='/habitaciones/reservas/perfil' element={<User />}></Route>
-      <Route path='/newuser'  element={<FormEstudiante />}></Route>
+      <Route path='/newuser'  element={<FormUser />}></Route>
     </Routes  >
   </BrowserRouter>
 );

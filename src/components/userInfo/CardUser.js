@@ -61,7 +61,7 @@ function CardHost({huesped,setUplist,upList,handleClose,handleOpen,setDataModal}
         <Container className='container-fluid row-fluid'>
           <Card className="ReservUCardBackground" style={{ }}>
          
-            <Card.Img variant="top" src={huesped.img} className="img-card" style={{ width: '15rem' }}/>
+            <Card.Img variant="top" src={huesped.img} className="img-card" style={{ width: '15em', height: '15em', borderRadius: '50em', justifyContent: 'center'}}/>
             <Card.Body>
                 <Card.Title className="">Huésped: {huesped.nombre} {huesped.apellido}</Card.Title>
                 <Card.Text>

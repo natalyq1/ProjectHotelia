@@ -101,7 +101,7 @@ function ListHost() {
                                 placeholder="Ingrese su nombre"
                                 name="nombre"
                                 value={dataModal.nombre}
-                                onChange={handleChangeModal} />
+                                />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
@@ -111,7 +111,7 @@ function ListHost() {
                                 placeholder="Ingrese su apellido"
                                 name="apellido"
                                 value={dataModal.apellido}
-                                onChange={handleChangeModal} />
+                                />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
@@ -121,19 +121,16 @@ function ListHost() {
                                 placeholder="Ingrese su fecha de nacimiento"
                                 name="fnacimiento"
                                 value={dataModal.fnacimiento}
-                                onChange={handleChangeModal} />
+                                 />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
                             <Form.Label>Tipo de Documento:</Form.Label>
                             <Form.Select
                                 name="tipodoc"
-                                onChange={handleChangeModal}>
+                                >
                                 <option value={dataModal.tipodoc}>{dataModal.tipodoc}</option>
-                                <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
-                                <option value="Pasaporte">Pasaporte</option>
-                                <option value="Cédula de extranjería">Cédula de extranjería</option>
-                            </Form.Select>
+                                </Form.Select>
                         </Form.Group>
 
                         <Form.Group className="mb-3">
@@ -143,7 +140,7 @@ function ListHost() {
                                 placeholder="Ingrese su número de documento"
                                 name="_id"
                                 value={dataModal._id}
-                                onChange={handleChangeModal} />
+                                 />
                         </Form.Group>
 
                         <Form.Group className="mb-3">

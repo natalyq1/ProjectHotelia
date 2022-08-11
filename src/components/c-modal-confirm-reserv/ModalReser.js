@@ -54,7 +54,7 @@ function ModalConfirmReserv({ index, reservas, habitaciones, users, setUplist, u
                     <div className="rendered-form">
                         <div className="formbuilder-text form-group field-usuario">
                             <label for="usuario" className="formbuilder-text-label">Usuario:</label>
-                            <input type="text" placeholder="Luis gomez" className="form-control" name="usuario" access="false" id="usuario"></input>
+                            <input type="text" placeholder="Huésped" className="form-control" name="usuario" access="false" id="usuario"></input>
                         </div>
                         <div className="formbuilder-text form-group field-telefono">
                             <label for="telefono" className="formbuilder-text-label">Teléfono de contacto:</label>

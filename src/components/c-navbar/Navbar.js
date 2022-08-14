@@ -32,7 +32,7 @@ function Navbar() {
                 <Link to="/contacto" className="MainNavbarFontSize">Contacto</Link>
               </Nav.Item>
               <Nav.Item>
-                <Link to="" className="MainNavbarFontSize"><img src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png" /></Link>
+                <Link to="/register" className="MainNavbarFontSize"><img src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png" /></Link>
               </Nav.Item>
               <Nav.Item>
                 <Link to="/newuser" className="MainNavbarFontSize"><img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" /></Link>

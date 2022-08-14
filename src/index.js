@@ -8,7 +8,8 @@ import Navbar from './components/c-navbar/Navbar';
 import Inicio from './pages/Inicio';
 import Roomsearch from './pages/Roomsearch';
 import User from './pages/userpages/User';
-import FormUser from './pages/userpages/FormUser';  
+import FormUser from './pages/userpages/FormUser';
+import Registro from './components/c-register/FormUser';
 
 import Dash2 from './pages/Dash';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -31,6 +32,7 @@ root.render(
     
       <Route path='/habitaciones/reservas/perfil' element={<User />}></Route>
       <Route path='/newuser'  element={<FormUser />}></Route>
+      <Route path='/register' element={<Registro />}></Route>
     </Routes  >
   </BrowserRouter>
 );

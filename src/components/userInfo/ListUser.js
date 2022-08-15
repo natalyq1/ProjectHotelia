@@ -187,7 +187,7 @@ function ListHost() {
                             <Form.Label>Contraseña:</Form.Label>
                             <Form.Control
                                 type="password"
-                                placeholder="Ingrese su país de origen"
+                                placeholder="Ingrese su contraseña"
                                 name="password"
                                 value={dataModal.password}
                                 onChange={handleChangeModal} />

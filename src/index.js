@@ -9,7 +9,7 @@ import Inicio from './pages/Inicio';
 import Roomsearch from './pages/Roomsearch';
 import User from './pages/userpages/User';
 import FormUser from './pages/userpages/FormUser';
-import Registro from './components/c-register/FormUser';
+import Registro from './components/c-register/RegisterUser';
 
 import Dash2 from './pages/Dash';
 import 'bootstrap/dist/css/bootstrap.min.css';

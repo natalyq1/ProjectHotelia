@@ -20,7 +20,6 @@ function User() {
                 <Col >
                     <Listrooms />
                     
-
 <ListHost />
 
 

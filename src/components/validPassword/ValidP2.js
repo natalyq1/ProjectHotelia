@@ -1,10 +1,9 @@
-import { Card, Button, Container} from "react-bootstrap";
+import { Card, Button} from "react-bootstrap";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { Row} from 'react-bootstrap';
 
-import ValidatePassword from '../validPassword/ValidatePassword' ;
-function CardHost({huesped,setUplist,upList,handleClose,handleOpen,setDataModal}){
+
+function EditPassword({huesped,setUplist,upList,handleClose,handleOpen,setDataModal}){
 
     /*1. Crear petición asíncrona*/
   /*  const url="http://localhost:5000/estudiantes"; */
@@ -58,33 +57,15 @@ function CardHost({huesped,setUplist,upList,handleClose,handleOpen,setDataModal}
     
 }
     return(
-        <div className="ReservUCardContainer ">
-        <Container className='container-fluid row-fluid'>
-          <Card className="ReservUCardBackground" style={{ }}>
-         
-            <Card.Img variant="top" src={huesped.img} className="img-card" style={{ width: '15em', height: '15em', borderRadius: '50em', justifyContent: 'center'}}/>
-            <Card.Body>
-                <Card.Title className="" style={{marginLeft: 10}}>Huésped: {huesped.nombre} {huesped.apellido}</Card.Title>
-                <Card.Text style={{marginLeft: 18}}>
-                <strong>Tipo Documento: </strong>{huesped.tipodoc}<br/>
-                <strong>No. Documento: </strong>{huesped._id}<br/>
-                <strong>Fecha de nacimiento: </strong>{huesped.fnacimiento}<br/>
-                <strong>Género: </strong>{huesped.genero}<br/>
-                <strong>Email: </strong>{huesped.email}<br/>
-                <strong>Teléfono: </strong>{huesped.telefono}<br/>
-                <strong>País de origen: </strong>{huesped.paisorigen}<br/>
-                
-                </Card.Text>
-                <Button className="btn ReservUCardButtonEdit" style={{marginLeft: 10}}
-                 onClick={handleEdit} >Editar Información</Button>
-                <ValidatePassword />
-            </Card.Body>
-            
-        </Card>
-        </Container>
+        <div className="">
+        
+        
+                <Button className="btn ReservUCardButtonEdit" onClick={handleEdit} >Editar Contraseña</Button>
+       
+        
         </div>
      
     );
 }
 
-export default CardHost;
+export default EditPassword;

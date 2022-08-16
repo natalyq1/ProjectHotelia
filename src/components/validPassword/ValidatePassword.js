@@ -79,16 +79,16 @@ function ValidatePassword() {
         console.log(onBlur.target.value);
     if(onBlur.target.value != list.password ) {
         Swal.fire(
-            'Error!',
-            'Las contraseña actual no coincide',
+            '¡Error!',
+            'La contraseña actual no coincide',
             'error'
         )
         return false;
     }
     else {
         Swal.fire(
-            'Puede seguir!',
-            'coincide',
+            '¡Puede seguir!',
+            'La contraseña actual coincide',
             'success' 
         )
         return true;
@@ -133,8 +133,8 @@ function ValidatePassword() {
                             <input
                                 type="password"
                                 placeholder="nueva contraseña"
-                                name="Password"
-                                id= "Password"
+                                name="password"
+                                id= "password"
                                 onChange={handleChangeModal} />
                         </Form.Group>
                       

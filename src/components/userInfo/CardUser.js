@@ -33,14 +33,14 @@ function CardHost({huesped,setUplist,upList,handleClose,handleOpen,setDataModal}
               if (response.status === 200) {
                 Swal.fire(
                     'Eliminado!',
-                    `El estudiante ha sido eliminado exitosamente!`,
+                    `Eliminado exitosamente!`,
                     'success'
                 )
                 setUplist(!upList);
             }else {
                 Swal.fire(
                     'Error!',
-                    'Hubo un problema al eliminar el estudiante!',
+                    'Hubo un problema al eliminar!',
                     'error'
                 )
             }

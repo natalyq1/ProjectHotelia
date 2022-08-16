@@ -48,9 +48,10 @@ const onChangeTerminos=(e)=>{
 cambiarTerminos(e.target.checked);
 }
 const navigate=useNavigate();
-const [data,setData]=useState({_id:"",nombre:"",apellido:"",fnacimiento:"",tipodoc:"",genero:"", email:"", telefono:"",paisorigen:"",password:"",tipouser:"", img:""});
-const handleChange=({target})=>{
+const [data,setData]=useState({_id:"",nombre:"",apellido:"",fnacimiento:"",tipodoc:"",genero:"",email:"",telefono:"",paisorigen:"",password:"",tipouser:"",img:""});
 
+const handleChange=({target})=>{
+console.log(data)
     /*cada vez que exista un cambio se guarda el valor en el estado data*/
             setData({
                 ...data,
@@ -58,20 +59,18 @@ const handleChange=({target})=>{
             })
         }
 
-
+ const url="https://app-proyectohotelia.herokuapp.com/users";
 const onSubmit =(e)=>{
   e.preventDefault();
-  const url="https://app-proyectohotelia.herokuapp.com/users";
+ 
 const response= axios.post(url,data);
-        //console.log(response)
+        console.log(response)
         if(response.status===201){
             Swal.fire(
                 'Error!',
                 `Hubo un problema al registrar el huésped!`,
                     'error'
-                
             )
-                
         }else{
             Swal.fire(
                 'Guardado!',
@@ -319,180 +318,3 @@ return(
 
 }
 export default Registro;
-    {/*<div>
-        <Container className=' my-5 p-4' style={{backgroundColor: '#B2B3B3', borderRadius: '8px'}}>
-        <h1 className='CardRoomTitle mb-3'>Ingreso Nuevo Huésped</h1>
-
-        <Form action="" onSubmit={onSubmit} 
-            className='TextUserInfo'>
-                <Form.Group className="mb-3">
-                    <Form.Label>Nombre:</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Ingrese su nombre"
-                        name="nombre"
-                        value={data.nombre}
-                        onChange={handleChange}
-                        estado={nombre}
-					    cambiarEstado={cambiarNombre}
-                        leyendaError="El nombre solo puede contener letras y espacios."
-					    expresionRegular={expresiones.nombre}
-                    />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                    <Form.Label>Apellido:</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Ingrese sus apellidos"
-                        name="apellido"
-                        value={data.apellido}
-                        onChange={handleChange}
-                    />
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                            <Form.Label>Fecha de nacimiento:</Form.Label>
-                            <Form.Control
-                                type="date"
-                                placeholder="Ingrese su fecha de nacimiento"
-                                name="fnacimiento"
-                                value={data.fnacimiento}
-                                onChange={handleChange} />
-                        </Form.Group>
-
-                <Form.Group className="mb-3">
-                    <Form.Label>Tipo de documento:</Form.Label>
-                    <Form.Select
-                        name="tipodoc"
-                        onChange={handleChange}>
-                        <option>Seleccione el tipo de documento</option>
-                        <option value="Cedula de Ciudadania">Cédula de Ciudadanía</option>
-                        <option value="Pasaporte">Pasaporte</option>
-                        <option value="Cedula de Extranjeria">Cédula de Extranjeria</option>
-                    </Form.Select>
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                    <Form.Label>No. de Documento:</Form.Label>
-                    <Form.Control
-                        type="number"
-                        placeholder="Ingrese el número del documento del Huésped"
-                        name="_id"
-                        value={data._id}
-                        onChange={handleChange}
-                    />
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                    <Form.Label>Género:</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Femenino, masculino, ..."
-                        name="genero"
-                        value={data.genero}
-                        onChange={handleChange}
-                    />
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                    <Form.Label>Correo electrónico:</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Ingrese su correo electrónico"
-                        name="email"
-                        value={data.email}
-                        onChange={handleChange}
-                    />
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                            <Form.Label>Contraseña:</Form.Label>
-                            <Form.Control
-                                type="password"
-                                placeholder="Ingrese su contraseña"
-                                name="password"
-                                value={data.password}
-                                onChange={handleChange} />
-                        </Form.Group>
-
-                <Form.Group className="mb-3">
-                    <Form.Label>Teléfono:</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Ingrese su número de contacto"
-                        name="telefono"
-                        value={data.telefono}
-                        onChange={handleChange}
-                    />
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                    <Form.Label>País de origen:</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Ingrese su país de origen"
-                        name="paisorigen"
-                        value={data.paisorigen}
-                        onChange={handleChange}
-                    />
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                            <Form.Label>Usuario tipo:</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="huesped"
-                                name="tipouser"
-                                value={data.tipouser}
-                                onChange={handleChange} />
-                        </Form.Group>
-
-                <Form.Group className="mb-3">
-                    <Form.Label>Foto</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Ingrese su foto"
-                        name="img"
-                        value={data.img}
-                        onChange={handleChange}
-                    />
-                </Form.Group>
-               
-               <button className='ModalCancelButtonConfirm me-3 my-3 mx-3' >
-                    Guardar
-                </button> 
-                 
-
-                 <Link to="/" className="me-3 text-decoration-none" >
-                <button className='ReservUCardButtonCancel me-3 my-3 mx-3'  >
-                   Cancelar    
-                    </button> 
-                </Link>
-
-
-    <ContenedorTerminos>
-      <Label>
-        <input 
-        type="checkbox" 
-        name="terminos" 
-        id="terminos" 
-        checked={terminos}
-        onChange={onChangeTerminos}
-        />
-        Acepto Terminos y Condiciones
-      </Label>
-      </ContenedorTerminos>
-      {formularioValido===false && <MensajeError>
-        <p>
-           <img src="https://img.icons8.com/ios-glyphs/30/000000/error--v1.png"/>
-          <b>Error:</b>Por favor diligenciar el formulario correctamente</p>
-      </MensajeError>}
-      <ContenedorBotonCentrado>
-        <Boton type="submit">Enviar</Boton>
-        {formularioValido === true && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>}
-      </ContenedorBotonCentrado>
-
-            </Form>
-        </Container>
-    </div>
-      */}

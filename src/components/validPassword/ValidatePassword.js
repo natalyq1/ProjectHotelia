@@ -72,14 +72,35 @@ function ValidatePassword() {
     }, [upList])//se actualiza cada vez q se cambie el estado upList
     console.log(list);
 
-
+    
+    //var password= (`${list.password}`);
+    const validatePassword = (onBlur) => {
+        console.log(list.password);
+        console.log(onBlur.target.value);
+    if(onBlur.target.value != list.password ) {
+        Swal.fire(
+            'Error!',
+            'Las contraseña actual no coincide',
+            'error'
+        )
+        return false;
+    }
+    else {
+        Swal.fire(
+            'Puede seguir!',
+            'coincide',
+            'success' 
+        )
+        return true;
+    }
+    }
 
     return (
         <Container>
             {
                         <InfoHuesped
-                        
                         huesped={list}
+                        lastPassword={list.password}
                         setUplist={setUplist}
                         upList={upList}
                         handleClose={handleClose}
@@ -101,9 +122,10 @@ function ValidatePassword() {
                             <input
                                 type="password"
                                 placeholder="contraseña actual"
-                                name="password"
-                                
-                                onChange={handleChangeModal} />
+                                name="lastPassword"
+                                id= "lastPassword"
+                                onBlur={validatePassword}
+                                />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
@@ -111,8 +133,8 @@ function ValidatePassword() {
                             <input
                                 type="password"
                                 placeholder="nueva contraseña"
-                                name="password"
-                                
+                                name="Password"
+                                id= "Password"
                                 onChange={handleChangeModal} />
                         </Form.Group>
                       

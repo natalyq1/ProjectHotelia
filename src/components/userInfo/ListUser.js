@@ -182,8 +182,7 @@ function ListHost() {
                                 value={dataModal.paisorigen}
                                 onChange={handleChangeModal} />
                         </Form.Group>
-
-                        <Form.Group className="mb-3">
+{/* <Form.Group className="mb-3">
                             <Form.Label>Contraseña:</Form.Label>
                             <Form.Control
                                 type="password"
@@ -191,7 +190,8 @@ function ListHost() {
                                 name="password"
                                 value={dataModal.password}
                                 onChange={handleChangeModal} />
-                        </Form.Group>
+                        </Form.Group>*/}
+                        
 
                         <Form.Group className="mb-3">
                             <Form.Label>Usuario tipo:</Form.Label>

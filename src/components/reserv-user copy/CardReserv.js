@@ -57,12 +57,12 @@ function CardReservation({ reservas, habitaciones, setUplist, upList, handleClos
               <div className='ReservUCardArrivalDeparture'>
                 <div className=" formbuilder-date form-group field-date-1656631465827">
                   <label htmlFor=" date-1656631465827" className="ReservUCardFontNigthAdultKid formbuilder-date-label">Llegada</label>
-                  <input type="text" className="form-control" name="date-1656631460786" access="false" id="date-1656631460786" placeholder={reservas.fentrada.substring(0, 10)} ></input>
+                  <input type="text" className="form-control" name="date-1656631460786" access="false" id="date-1656631460786" placeholder={reservas.fentrada} ></input>
                 </div>
 
                 <div className=" formbuilder-date form-group field-date-1656631460786">
                   <label htmlFor="date-1656631460786" className="ReservUCardFontNigthAdultKid formbuilder-date-label">Salida</label>
-                  <input type="text" className="form-control" name="date-1656631460786" access="false" id="date-1656631460786" placeholder={reservas.fsalida.substring(0, 10)} ></input>
+                  <input type="text" className="form-control" name="date-1656631460786" access="false" id="date-1656631460786" placeholder={reservas.fsalida} ></input>
                 </div>
               </div>
 

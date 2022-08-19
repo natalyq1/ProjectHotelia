@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const colores = {
 	borde: "#0075FF",
 	error: "#bb2929",
-	exito: "#1ed12d"
+	exito: "#337ab7"
 }
 const Ftitulo = styled.p`
     color: #572612;
@@ -52,13 +52,14 @@ const Ftitulo = styled.p`
 
 const Formulario = styled.form`
 	display: grid;
+	font-family: 'louis';
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
-    margin: 1em 8em 3em 8em;
-    padding:1em 0.7em;
+    margin: 1em 8em 3em 10em;
+    padding:1em 2em;
     border-radius: 18px;
 	border-radius: 32px;
-	background: #aed3f4;
+	background: #B2B3B3;
 	box-shadow:  10px 10px 20px #a5c8e8,
 				 -10px -10px 20px #b7deff;
 
@@ -169,22 +170,6 @@ const ContenedorBotonCentrado = styled.div`
 `;
 
 const Boton = styled.button`
-	height: 45px;
-	line-height: 45px;
-	width: 80%;
-	font-weight: bold;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-    border-radius: 6px;
-	color: #F9D544;
-    background: linear-gradient(145deg, #337ab7, #157a8a);
-    
-
-	&:hover {
-		box-shadow: 3px 2px 3px #000;
-	}
-
 	@media (min-width: 600px){
 		width: 17%;
 	}
@@ -192,6 +177,7 @@ const Boton = styled.button`
 
 const MensajeExito = styled.p`
 	font-size: 14px;
+	font-weight: bold;
 	color: ${colores.exito};
 `;
 

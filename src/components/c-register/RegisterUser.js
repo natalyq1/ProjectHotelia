@@ -27,19 +27,20 @@ const Registro =()=>{
 	const [formularioValido,cambiarFormularioValido]= useState(null); 
 
   const expresiones = {
-		nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-        apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
-		fnacimiento: /^\d{7,14}$/,
-        // /^(?:3[01]|[12][0-9]|0?[1-9])([\-/.])(0?[1-9]|1[1-2])\1\d{4}$/, 
-        tipodoc: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
+		nombre: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
+        apellido: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, 
+		fnacimiento: /^(?:3[01]|[12][0-9]|0?[1-9])([\-/.])(0?[1-9]|1[1-2])\1\d{4}$/, 
+        // /^\d{7,14}$/, 
+        tipodoc: /^[a-zA-ZÀ-ÿ\s]{6,40}$/, 
         _id: /^\d{7,14}$/,
-        genero: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+        genero: /^[a-zA-ZÀ-ÿ\s]{8,40}$/,
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-		password: /^.{4,12}$/, // 4 a 12 digitos.
+		password: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/, // digito, mayuscula, minuscula // 5Unpocodet0d0
 		telefono: /^\d{7,14}$/, // 7 a 14 numeros.
         paisorigen: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
         tipouser: /^huesped$/,
-        img: /^[a-zA-ZÀ-ÿ\s]{0,40}$/,
+        img: /^[/#?]?.*$/,//una url
+        // /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,//una url
         //[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]{2,}
 
 	}
@@ -60,12 +61,13 @@ console.log(data)
         }
 
  const url="https://app-proyectohotelia.herokuapp.com/users";
-const onSubmit =(e)=>{
+
+ const onSubmit =(e)=>{
   e.preventDefault();
  
 const response= axios.post(url,data);
         console.log(response)
-        if(response.status===201){
+        /*if(response.status===201){
             Swal.fire(
                 'Error!',
                 `Hubo un problema al registrar el huésped!`,
@@ -79,7 +81,7 @@ const response= axios.post(url,data);
                     'success'
             )
             navigate("/habitaciones");
-        }
+        }*/
   if(
   nombre.valido==='true'&&
   apellido.valido==='true'&&
@@ -92,12 +94,11 @@ const response= axios.post(url,data);
   telefono.valido==='true'&&
   paisorigen.valido==='true'&&
   tipouser.valido==='true'&&
-  
   terminos
   ){
 	cambiarFormularioValido(true);
-	cambiarNombre({campo:'',valido: null});
-    cambiarApellido({campo:'',valido:''});
+	cambiarNombre({campo:'',valido: 'null'});
+    cambiarApellido({campo:'',valido:'null'});
 	cambiarPassword({campo:'',valido: null});
 	cambiarFnacimiento({campo:'',valido:null});
     cambiarTipodoc({campo:'',valido:null});
@@ -119,9 +120,9 @@ return(
 
     <main>
     
-    <h3 style={{textAlign: 'center', marginTop: '10px', color: '#337ab7'}}>Nuevo Huésped</h3>
+    <h3 className='CardRoomTitle' style={{textAlign: 'center', marginTop: '10px'}}>Nuevo Huésped</h3>
     
-     <Formulario action="" onSubmit={onSubmit} > 
+     <Formulario action="" onSubmit={onSubmit}> 
      
                <Input
                    estado={nombre}
@@ -223,7 +224,7 @@ return(
 					name="password"
                     value={data.password}
                                 onChange={handleChange} 
-					leyendaError="La contraseña tiene que ser de 4 a 12 dígitos."
+					leyendaError="Debe tener entre 8 y 16 caracteres, al menos un dígito, una minúscula y una mayúscula."
 					expresionRegular={expresiones.password}
         
                />
@@ -278,7 +279,7 @@ return(
                    name="img"
                    value={data.img}
                         onChange={handleChange}
-                   leyendaError="No es obligatorio"
+                   leyendaError="Debe ser una url, No es un campo obligatorio."
                    expresionRegular={expresiones.img}
         
                />
@@ -302,13 +303,15 @@ return(
          <FontAwesomeIcon /><img src="https://img.icons8.com/ios-glyphs/30/000000/error--v1.png"/>
          <b>Error:</b>Por favor diligenciar el formulario correctamente</p>
      </MensajeError>}
-     <ContenedorBotonCentrado>
-       <Boton tipo="submit">Enviar</Boton>
-       {formularioValido === true && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>}
+     <ContenedorBotonCentrado >
+        <Boton className='ReservUCardButtonCancel'><Link to='/habitaciones' style={{textDecoration: 'none', color: 'white'}}>Cancelar</Link></Boton>
+       <Boton className='ModalCancelButtonConfirm' href="/register#here" type="submit">Enviar</Boton>
+       {formularioValido === true && <MensajeExito>¡Registro nuevo exitoso! <Link to='/habitaciones'>Salir</Link></MensajeExito>}
        
      </ContenedorBotonCentrado>
     
      </Formulario>
+     <div id="here" style={{marginTop: '20px',color: 'none'}}>.</div>
    </main>
    
 

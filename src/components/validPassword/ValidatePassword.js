@@ -118,7 +118,7 @@ function ValidatePassword() {
                     <Modal.Body className="TextUserInfo">
                        
                         <Form.Group className="mb-3" style={{alignItems: 'center'}}>
-                            <Form.Label style={{marginRight: '10px'}}>Contraseña Actual:</Form.Label>
+                            <Form.Label style={{marginRight: '10px'}}>Contraseña Actual: </Form.Label>
                             <input
                                 type="password"
                                 placeholder="contraseña actual"
@@ -129,7 +129,7 @@ function ValidatePassword() {
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label style={{marginRight: '10px'}}>Nueva Contraseña:</Form.Label>
+                            <Form.Label style={{marginRight: '10px'}}>Nueva Contraseña: </Form.Label>
                             <input
                                 type="password"
                                 placeholder="nueva contraseña"
